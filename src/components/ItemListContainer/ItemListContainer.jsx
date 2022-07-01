@@ -1,19 +1,32 @@
+import { getDocs, query, where } from 'firebase/firestore';
+import { collectionProd } from '../../firebaseConfig';
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
-import { traerProductos } from '../../mock/products';
 
 const ItemListContainer = ({ saludo }) => {
     const [products, setProducts] = useState([]);
 
+    const { categoryId } = useParams();
+
     useEffect(() => {
-        traerProductos()
-            .then((res) => {
-                setProducts(res);
-            })
-            .catch((error) => {
-                console.log(error);
+        //const collectionProd = collection(db, 'products')
+        //const ref = collectionProd;
+
+        const ref = categoryId
+            ? query(collectionProd, where('category', '==', categoryId))
+            : collectionProd;
+
+        getDocs(ref).then((response) => {
+            const products = response.docs.map((doc) => {
+                return {
+                    id: doc.id,
+                    ...doc.data(),
+                };
             });
-    }, []);
+            setProducts(products);
+        });
+    }, [categoryId]);
 
     //console.log(products);
     return (

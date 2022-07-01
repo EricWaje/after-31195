@@ -26,6 +26,12 @@ nav ul li {
     margin: 0px 10px;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
 .shop {
     display: flex;
     align-items: center;
@@ -37,8 +43,9 @@ nav ul li {
 }
 
 .count {
+    margin-top: 30px;
     background-color: rgb(210, 96, 96);
-    max-width: 10%;
+    max-width: 20%;
     padding: 8px;
     display: flex;
     flex-direction: column;
@@ -82,4 +89,68 @@ nav ul li {
     justify-content: space-between;
     align-items: flex-start;
     border: 2px solid red;
+}
+
+.cart {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(210, 96, 96);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.infoCart {
+    background-color: rgb(191, 191, 191);
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.cartBtn {
+    margin-top: 40px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    padding: 10px;
+    margin: 10px;
+}
+
+.idGenerado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 40px;
 }

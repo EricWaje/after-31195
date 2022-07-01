@@ -1,17 +1,14 @@
-export const productos = [
+export const products = [
     {
-        id: 1,
         name: 'Remera',
         price: 200,
         stock: 4,
-
         img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/remera3_vc9mqa.jpg',
         category: 'remeras',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
     },
     {
-        id: 2,
         name: 'Remera2',
         price: 222,
         stock: 10,
@@ -22,7 +19,6 @@ export const productos = [
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
     },
     {
-        id: 3,
         name: 'Camisa',
         price: 300,
         stock: 4,
@@ -33,7 +29,6 @@ export const productos = [
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
     },
     {
-        id: 4,
         name: 'Camisa2',
         price: 333,
         stock: 4,
@@ -43,9 +38,27 @@ export const productos = [
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
     },
-
     {
-        id: 5,
+        name: 'Riñonera',
+        price: 70,
+        stock: 6,
+
+        img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera1C_alnfaf.jpg',
+        category: 'rinoneras',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
+    },
+    {
+        name: 'Riñonera2',
+        price: 77,
+        stock: 6,
+
+        img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera3C_hnxpzc.jpg',
+        category: 'rinoneras',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
+    },
+    {
         name: 'Gorra',
         price: 80,
         stock: 20,
@@ -56,7 +69,6 @@ export const productos = [
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
     },
     {
-        id: 6,
         name: 'Gorra2',
         price: 88,
         stock: 5,
@@ -68,30 +80,8 @@ export const productos = [
     },
 ];
 
-const producto = {
-    id: 1,
-    name: 'Remera',
-    price: 200,
-    stock: 4,
-
-    img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/remera3_vc9mqa.jpg',
-    category: 'remeras',
-    description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
-};
-
-export const traerProductos = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(productos);
-        }, 1000);
-    });
-};
-
-export const traerProducto = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(producto);
-        }, 1000);
-    });
-};
+export const traerProductos = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(products);
+    }, 2000);
+});
